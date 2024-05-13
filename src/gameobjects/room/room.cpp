@@ -1,4 +1,5 @@
 #include "room.h"
+#include<cstring>
 #include "roomdata.h"
 #include "../../functions/AnsiPrint/AnsiPrint.h"
 
