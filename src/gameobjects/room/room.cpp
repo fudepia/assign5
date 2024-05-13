@@ -3,12 +3,13 @@
 #include "../../functions/AnsiPrint/AnsiPrint.h"
 
 // read data to the Room class
-Room::Room(RoomData data) {
-    
+Room::Room(RoomData data):roomID(data.id), roomName(data.name), roomDescription(data.description), playerInitialPosition(data.playerInitialPosition) {
+	memcpy(&defaultRoomObjectMap[0][0],
+		&data.defaultRoomObjectMap[0][0],
+		GAME_WINDOW_SIZE_Y*GAME_WINDOW_SIZE_X*sizeof(data.defaultRoomObjectMap[0][0]));
 }
 
 // add your code to implement the Room class here
-
 
 
 
